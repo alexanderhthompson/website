@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+	<title>alec.freumh.org blog</title>
+	<description>alec.freumh.org blog</description>
+	<link>https://alec.freumh.org/blog/</link>
+	<atom:link href="https://alec.freumh.org/rss.xml" rel="self" type="application/rss+xml" />
+${blogs}
+</channel>
+</rss>
