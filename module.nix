@@ -56,7 +56,7 @@ let cfg = config.services.alec-website; in
 
     security.acme.certs."${cfg.domain}".extraDomainNames = [ "www.${cfg.domain}" ];
 
-    dns.zones.${cfg.zone}.records = [
+    eilean.services.dns.zones.${cfg.zone}.records = [
       {
         name = "${cfg.domain}.";
         type = "CNAME";
