@@ -1,4 +1,4 @@
-{ pkgs, config, lib, ... }:
+packages: { pkgs, config, lib, ... }:
 
 with lib;
 
@@ -33,7 +33,7 @@ let cfg = config.services.alec-website; in
         "${cfg.domain}" = {
           forceSSL = true;
           enableACME = true;
-          root = "${pkgs.alec-website}";
+          root = "${packages.${pkgs.stdenv.hostPlatform.system}.default}";
           locations."/var/".extraConfig = ''
             alias /var/${cfg.domain}/;
           '';
