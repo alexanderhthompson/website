@@ -45,10 +45,10 @@ let cfg = config.services.alec-website; in
           '';
         };
         "www.${cfg.domain}" = {
-          addSSL = true;
+          forceSSL = true;
           useACMEHost = cfg.domain;
           extraConfig = ''
-            return 301 $scheme://${cfg.domain}$request_uri;
+            return 301 https://${cfg.domain}$request_uri;
           '';
         };
       };
